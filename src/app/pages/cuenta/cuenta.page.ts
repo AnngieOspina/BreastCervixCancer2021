@@ -6,10 +6,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cuenta.page.scss'],
 })
 export class CuentaPage implements OnInit {
+  componentes: Componente [] = [
+    {
+      icon:'fitness-outline',
+      name:'Prevencion',
+      redirectTo: '/eis/tab1'
+   },
+   {
+      icon:'medkit-outline',
+      name:'Diagnóstico oportuno',
+      redirectTo: '/eis'
+    },
+    {
+      icon:'create-outline',
+      name:'Espacio personal',
+      redirectTo: '/personal'
+    },
+  ];
+  
+  constructor() { 
 
-  constructor() { }
-
-  ngOnInit() {
   }
 
+  ngOnInit() {
+ 
+}
+}
+
+
+
+interface Componente {
+  icon: string;
+  name: string;
+  redirectTo: string;
 }
