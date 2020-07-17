@@ -10,6 +10,18 @@ const routes: Routes = [
     path: 'cuenta',
     loadChildren: () => import('./pages/cuenta/cuenta.module').then( m => m.CuentaPageModule)
   },
+  {
+    path: 'prevencion',
+    loadChildren: () => import('./pages/prevencion/prevencion.module').then( m => m.PrevencionPageModule)
+  },
+  {
+    path: 'eis',
+    loadChildren: () => import('./pages/eis/eis.module').then( m => m.EisPageModule)
+  },
+  {
+    path: 'personal',
+    loadChildren: () => import('./pages/personal/personal.module').then( m => m.PersonalPageModule)
+  },
  
 ];
 @NgModule({

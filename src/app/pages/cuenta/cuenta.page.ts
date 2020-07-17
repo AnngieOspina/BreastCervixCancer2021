@@ -10,7 +10,7 @@ export class CuentaPage implements OnInit {
     {
       icon:'fitness-outline',
       name:'Prevencion',
-      redirectTo: '/eis/tab1'
+      redirectTo: '/prevencion'
    },
    {
       icon:'medkit-outline',

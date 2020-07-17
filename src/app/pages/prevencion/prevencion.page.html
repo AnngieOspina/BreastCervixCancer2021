@@ -1,0 +1,115 @@
+<app-header titulo="Prevención"></app-header>
+<ion-content class="ion-padding">
+
+  <ion-grid fixed>
+
+
+    <img src="/assets/images/+cuidados.png"/>
+
+    <div class="ion-text-justify">
+      <small>
+        Cuidar nuestra salud debe ser una prioridad durante cualquier etapa de nuestra vida. Esto nos ayudará a tener una calidad de vida excelente en todos los niveles y edades.
+
+      </small>
+
+
+      
+    </div>
+
+    <ion-segment scrollable mode="md" [(ngModel)]="seleccionar"
+                  color="secondary">
+      <ion-segment-button mode="md" value="saludable">
+        <img src="/assets/images/habitos.svg"/>
+      </ion-segment-button>
+      <ion-segment-button mode="md" value="mama">
+        <img src="/assets/images/mama.svg"/> 
+        </ion-segment-button>
+      <ion-segment-button mode="md" value="cuello">
+        <img src="/assets/images/cuello.svg"/>
+      </ion-segment-button>
+    </ion-segment>
+
+  </ion-grid>
+  <div *ngIf="seleccionar=='saludable'">
+    
+    <ion-grid fixed>
+      
+      <ion-row>
+
+        <ion-col size="6">
+          
+            
+            <ion-card routerLink="/alimentacion">
+              
+              <img class="cards" src="/assets/images/Ealimentacion.png"/>
+              <ion-card-subtitle class="ion-text-center" color="primary">
+                Alimentación balanceada
+                </ion-card-subtitle>
+            </ion-card>
+        </ion-col>
+
+    
+      <ion-col size="6">
+        <ion-card routerLink="/actividad">
+        
+          <img class="cards" src="/assets/images/actividad.png"/>
+          <ion-card-subtitle class="ion-text-center" color="primary">
+          Actividad física
+            </ion-card-subtitle>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card routerLink="/visual" >
+        
+          <img class="cards" src="/assets/images/visual.png"/>
+          <ion-card-subtitle class="ion-text-center" color="primary">
+            Salud visual, auditiva y bucal
+              </ion-card-subtitle>
+        
+        </ion-card>
+      </ion-col>
+      
+      <ion-col size="6">
+        <ion-card routerLink="/habitos">
+        
+          <img class="cards"  src="/assets/images/tabaco.png"/>
+          <ion-card-subtitle class="ion-text-center" color="primary">
+              Evitar hábitos tóxicos
+          </ion-card-subtitle>
+          
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+    </ion-grid>
+    
+  </div>
+
+  <div *ngIf="seleccionar=='mama'">
+    
+    <img class="top-20" src="/assets/images/Infografia1.png"/>
+
+  </div>
+
+  <div *ngIf="seleccionar=='cuello'" >
+        
+      <img  src="/assets/images/infografia2.png"/>
+      <div class="ion-text-justify">
+        <small class="top-20">  
+        
+
+
+    
+          
+          En Colombia, el cáncer de cuello uterino es la primera causa de muerte por cáncer entre mujeres de 30 a 59 años. A diferencia de otros cánceres, éste cuenta con un agente causal en la mayoría de los casos: el virus del papiloma humano (VPH).
+        </small>
+      </div>
+    
+  </div>
+
+</ion-content>
+
+<app-footer>
+  
+</app-footer>
