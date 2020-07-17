@@ -23,6 +23,22 @@ const routes: Routes = [
     path: 'personal',
     loadChildren: () => import('./pages/personal/personal.module').then( m => m.PersonalPageModule)
   },
+  {
+    path: 'alimentacion',
+    loadChildren: () => import('./pages/alimentacion/alimentacion.module').then( m => m.AlimentacionPageModule)
+  },
+  {
+    path: 'actividad',
+    loadChildren: () => import('./pages/actividad/actividad.module').then( m => m.ActividadPageModule)
+  },
+  {
+    path: 'habitos',
+    loadChildren: () => import('./pages/habitos/habitos.module').then( m => m.HabitosPageModule)
+  },
+  {
+    path: 'visual',
+    loadChildren: () => import('./pages/visual/visual.module').then( m => m.VisualPageModule)
+  },
  
 ];
 @NgModule({
