@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'visual',
     loadChildren: () => import('./pages/visual/visual.module').then( m => m.VisualPageModule)
   },
+  {
+    path: 'notas',
+    loadChildren: () => import('./pages/notas/notas.module').then( m => m.NotasPageModule)
+  },
  
 ];
 @NgModule({
