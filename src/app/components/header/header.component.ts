@@ -14,8 +14,6 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {}
 
-   
-
     async presentActionSheet() {
      const actionSheet = await this.actionSheetCtrl.create({
        header: 'Opciones',
@@ -32,7 +30,7 @@ export class HeaderComponent implements OnInit {
            console.log('Share clicked');
          }
        }, {
-         text: 'Favorite',
+         text: 'Favorito',
          icon: 'heart',
          handler: () => {
            console.log('Favorite clicked');

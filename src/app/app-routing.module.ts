@@ -1,47 +1,45 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
+import { NologinGuard } from './guards/nologin.guard';
 
 const routes: Routes = [
   
   {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule ), 
+    canActivate :[AuthGuard]
+  },
+  {
     path: '',
-    loadChildren: () => import('./pages/cuenta/cuenta.module').then( m => m.CuentaPageModule)
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
-    path: 'tabs',
-    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
+    canActivate :[NologinGuard]
   },
   {
-    path: 'prevencion',
-    loadChildren: () => import('./pages/prevencion/prevencion.module').then( m => m.PrevencionPageModule)
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule),
+    canActivate :[NologinGuard]
   },
   {
-    path: 'eis',
-    loadChildren: () => import('./pages/eis/eis.module').then( m => m.EisPageModule)
+    path: 'reset-pass',
+    loadChildren: () => import('./pages/reset-pass/reset-pass.module').then( m => m.ResetPassPageModule)
   },
   {
-    path: 'personal',
-    loadChildren: () => import('./pages/personal/personal.module').then( m => m.PersonalPageModule)
+    path: 'breastmama',
+    loadChildren: () => import('./pages/breastmama/breastmama.module').then( m => m.BreastmamaPageModule)
   },
   {
-    path: 'alimentacion',
-    loadChildren: () => import('./pages/alimentacion/alimentacion.module').then( m => m.AlimentacionPageModule)
+    path: 'breastcervix',
+    loadChildren: () => import('./pages/breastcervix/breastcervix.module').then( m => m.BreastcervixPageModule)
   },
   {
-    path: 'actividad',
-    loadChildren: () => import('./pages/actividad/actividad.module').then( m => m.ActividadPageModule)
-  },
-  {
-    path: 'habitos',
-    loadChildren: () => import('./pages/habitos/habitos.module').then( m => m.HabitosPageModule)
-  },
-  {
-    path: 'visual',
-    loadChildren: () => import('./pages/visual/visual.module').then( m => m.VisualPageModule)
-  },
-  {
-    path: 'notas',
-    loadChildren: () => import('./pages/notas/notas.module').then( m => m.NotasPageModule)
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
   },
  
 ];
