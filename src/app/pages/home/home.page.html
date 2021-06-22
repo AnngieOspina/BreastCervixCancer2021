@@ -1,13 +1,27 @@
-<app-header>
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-img class="centro" src="/assets/images/unico1.png"></ion-img>   
 
-</app-header>
+    <ion-buttons slot="end">
+      <ion-button  color="danger" (click)="Onlogout()">Salir</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
 
 <ion-content class="ion-padding">
 <span>
-  Hola, esta es la pantalla inicial 
+  Hola, esta es la pantalla inicial
 </span>
 <ion-button routerLink="/chat" expand="block" fill="outline" >
   ingresar al chat</ion-button>
+  <ion-button routerLink="/breastmama" expand="block" fill="outline" >
+    ingresar cáncer de mama</ion-button>
+    <ion-button routerLink="/breastcervix" expand="block" fill="outline" >
+      ingresar cáncer de cuello uterino</ion-button>
 </ion-content>
 <app-footer>
 </app-footer>

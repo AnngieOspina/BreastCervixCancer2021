@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "breastcervix2": {
+      "hosting": {
+        "app": [
+          "breastcervix2"
+        ]
+      }
+    },
+    "chatapp2021-66f9d": {
+      "hosting": {
+        "app": [
+          "chatapp2021-66f9d"
+        ]
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export interface User {
   uid: string;
   email: string;
-  
+    
 }
  
 export interface Message {

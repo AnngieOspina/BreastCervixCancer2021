@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LogicService {
     private dataUrl: string = "../assets/database/api.json"
+    
 
     constructor(private http: HttpClient) { }
 
