@@ -6,6 +6,7 @@ export const environment = {
   production: false
 };
 
+
 export 
   const firebaseConfig = {
   apiKey: "AIzaSyDPzEIlCkAy-55V8JhibTszWDZgfyvFe4A",
