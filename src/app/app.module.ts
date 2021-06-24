@@ -12,6 +12,8 @@ import { Calendar } from '@ionic-native/calendar/ngx';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireModule} from '@angular/fire';
 import { firebaseConfig} from "../environments/environment";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 @NgModule({
   declarations: [AppComponent],
