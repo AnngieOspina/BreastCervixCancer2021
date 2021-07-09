@@ -1,9 +1,17 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
+      <ion-menu-button color="primary"
+                        menu="menuPrincipal">
+
+
+      </ion-menu-button>
+      
+    </ion-buttons>
+    <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-img class="centro" src="/assets/images/unico1.png"></ion-img>   
+    <ion-img class="centro" src="/assets/images/logo fin fin.jpg" width="600" height="680"></ion-img>   
 
     <ion-buttons slot="end">
       <ion-button  color="danger" (click)="Onlogout()">Salir</ion-button>
@@ -12,16 +20,53 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-<span>
-  Hola, esta es la pantalla inicial
-</span>
-<ion-button routerLink="/chat" expand="block" fill="outline" >
-  ingresar al chat</ion-button>
-  <ion-button routerLink="/breastmama" expand="block" fill="outline" >
-    ingresar cáncer de mama</ion-button>
-    <ion-button routerLink="/breastcervix" expand="block" fill="outline" >
-      ingresar cáncer de cuello uterino</ion-button>
+
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>listado</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+    <ion-list>
+        <ion-item>
+          <ion-label>
+            Item 1 del listado
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Item 2 del listado
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Item 2 del listado
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            Item 3 del listado
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-content class="ion-padding">
+        <span>
+          Hola, esta es la pantalla inicial
+        </span>
+        <ion-button routerLink="/chat" expand="block" fill="outline" >
+          ingresar al chat</ion-button>
+          <ion-button routerLink="/breastmama" expand="block" fill="outline" >
+            ingresar cáncer de mama</ion-button>
+            <ion-button routerLink="/breastcervix" expand="block" fill="outline" >
+              ingresar cáncer de cuello uterino</ion-button>
+        </ion-content>
 </ion-content>
+
+
 <app-footer>
 </app-footer>
