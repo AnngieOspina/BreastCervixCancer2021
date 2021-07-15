@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TecnicaTermoPageRoutingModule } from './tecnica-termo-routing.module';
 
 import { TecnicaTermoPage } from './tecnica-termo.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TecnicaTermoPageRoutingModule
+    TecnicaTermoPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [TecnicaTermoPage]
 })

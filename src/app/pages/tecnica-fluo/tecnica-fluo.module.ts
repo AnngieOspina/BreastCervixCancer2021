@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TecnicaFluoPageRoutingModule } from './tecnica-fluo-routing.module';
 
 import { TecnicaFluoPage } from './tecnica-fluo.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TecnicaFluoPageRoutingModule
+    TecnicaFluoPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [TecnicaFluoPage]
 })
