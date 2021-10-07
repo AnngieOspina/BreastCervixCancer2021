@@ -12,7 +12,7 @@ app.component.html donde se encuentra el menú, ya que debe estar disponible par
       
     </ion-buttons>
     
-    <ion-img class="centro" src="/assets/images/logo fin fin.jpg" width="600" height="680"></ion-img>   
+    <ion-img class="centro" src="/assets/images/unico1.png" width="600" height="680"></ion-img>   
 
     <ion-buttons slot="end">
       <ion-button  color="danger" (click)="Onlogout()">Salir</ion-button>
@@ -20,21 +20,57 @@ app.component.html donde se encuentra el menú, ya que debe estar disponible par
 
   </ion-toolbar>
 </ion-header>
-
  
       <ion-content class="ion-padding">
-        <span>
-          Hola, esta es la pantalla inicial
-        </span>
-        <ion-button routerLink="/chat" expand="block" fill="outline" >
-          ingresar al chat</ion-button>
-          <ion-button routerLink="/breastmama" expand="block" fill="outline" >
-            ingresar cáncer de mama</ion-button>
-            <ion-button routerLink="/breastcervix" expand="block" fill="outline" >
-              ingresar cáncer de cuello uterino</ion-button>
+        
+             <ion-card routerLink="/tecnica-bio" class="card">
+            <ion-card-header color="primary">
+              <ion-card-subtitle class="ion-text-center">Técnica de tamizaje del cáncer de mama y cuello uterino</ion-card-subtitle>
+              <ion-card-title class="ion-text-center">Espectroscopia de impedancia eléctrica </ion-card-title>
+              
+            </ion-card-header >
+            <ion-card-content class="ion-text-justify">
+              Para reconocer el estado del tejido de la mama o del cuello uterino, se realiza la medida 
+          de impedancia, utilizando un dispositivo diseñado para este fin
+        <a routerLink="/tecnica-bio"> Leer más</a>
+            </ion-card-content>
+            
+          </ion-card>
+          <ion-card routerLink="/tecnica-fluo">
+            <ion-card-header color="primary">
+              <ion-card-subtitle class="ion-text-center">Técnica de tamizaje del cáncer de cuello uterino</ion-card-subtitle>
+              <ion-card-title class="ion-text-center">Espectroscopia óptica de fluorescencia </ion-card-title>
+              
+            </ion-card-header>
+            <ion-card-content class="ion-text-justify">
+              La espectroscopia óptica de fluorescencia es un método que analiza la fluorescencia de un tejido, 
+        mediante el uso de un haz de luz
+        <a routerLink="/tecnica-fluo"> Leer más</a>
+            </ion-card-content>
+            
+          </ion-card>
+
+          <ion-card routerLink="/tecnica-termo">
+            <ion-card-header color="primary">
+              <ion-card-subtitle class="ion-text-center">Técnica de tamizaje del cáncer de mama </ion-card-subtitle>
+              <ion-card-title class="ion-text-center">Temografia infrarroja </ion-card-title>
+              
+            </ion-card-header>
+            <ion-card-content class="ion-text-justify">
+              Cuando se presentan anomalías en las mamas, como el cáncer de mama, las células 
+              afectadas incrementan su actividad 
+        <a routerLink="/tecnica-termo"> Leer más</a>
+            </ion-card-content>
+            
+          </ion-card>
+          
+          <ion-button routerLink="/breastmama" expand="block" fill="outline" shape="round" >
+            Anatomía de las mamas</ion-button>
+            <ion-button routerLink="/breastcervix" expand="block" fill="outline" shape="round" >
+           Anatomía del cuello uterino</ion-button>
+            <ion-button routerLink="/chat" expand="block" fill="outline"shape="round" >
+              Ingresar al chat</ion-button>
         </ion-content>
-
-
 
 <app-footer>
 </app-footer>
