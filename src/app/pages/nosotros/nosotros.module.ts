@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TecnicasPageRoutingModule } from './tecnicas-routing.module';
+import { NosotrosPageRoutingModule } from './nosotros-routing.module';
 
-import { TecnicasPage } from './tecnicas.page';
-import { ComponentsModule } from '../../components/components.module';
+import { NosotrosPage } from './nosotros.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TecnicasPageRoutingModule,
+    NosotrosPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [TecnicasPage]
+  declarations: [NosotrosPage]
 })
-export class TecnicasPageModule {}
+export class NosotrosPageModule {}

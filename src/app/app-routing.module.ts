@@ -40,14 +40,12 @@ const routes: Routes = [
   {
     path: 'chat',
     loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
-  },  {
+  },
+  {
     path: 'tecnica-bio',
     loadChildren: () => import('./pages/tecnica-bio/tecnica-bio.module').then( m => m.TecnicaBioPageModule)
   },
-  {
-    path: 'tecnicas',
-    loadChildren: () => import('./pages/tecnicas/tecnicas.module').then( m => m.TecnicasPageModule)
-  },
+ 
   {
     path: 'tecnica-termo',
     loadChildren: () => import('./pages/tecnica-termo/tecnica-termo.module').then( m => m.TecnicaTermoPageModule)
@@ -55,6 +53,10 @@ const routes: Routes = [
   {
     path: 'tecnica-fluo',
     loadChildren: () => import('./pages/tecnica-fluo/tecnica-fluo.module').then( m => m.TecnicaFluoPageModule)
+  },
+  {
+    path: 'nosotros',
+    loadChildren: () => import('./pages/nosotros/nosotros.module').then( m => m.NosotrosPageModule)
   },
 
  
