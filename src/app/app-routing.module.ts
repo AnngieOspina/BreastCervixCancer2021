@@ -57,7 +57,11 @@ const routes: Routes = [
   {
     path: 'nosotros',
     loadChildren: () => import('./pages/nosotros/nosotros.module').then( m => m.NosotrosPageModule)
+  },  {
+    path: 'chat2',
+    loadChildren: () => import('./pages/chat2/chat2.module').then( m => m.Chat2PageModule)
   },
+
 
  
 ];

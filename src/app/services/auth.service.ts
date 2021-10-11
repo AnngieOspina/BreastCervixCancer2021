@@ -21,6 +21,7 @@ export interface Message {
   myMsg: boolean;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -76,6 +77,14 @@ addChatMessage(msg) {
     createdAt: firebase.firestore.FieldValue.serverTimestamp()
   });
 }
+addChatMessage2(msg2) {
+  return this.db.collection('messages2').add({
+    msg2: msg2,
+    from: this.currentUser.uid,
+    name:this.currentUser.email,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  });
+}
 
 getChatMessages() {
   let users = [];
@@ -91,6 +100,23 @@ getChatMessages() {
         m.myMsg = this.currentUser.uid === m.from;
       }        
       return messages
+    })
+  )
+}
+getChatMessages2() {
+  let users = [];
+  return this.getUsers().pipe(
+    switchMap(res => {
+      users = res;
+      return this.db.collection('messages2', ref => ref.orderBy('createdAt')).valueChanges({ idField: 'id' }) as Observable<Message[]>;
+    }),
+    map(messages2 => {
+      // Get the real name for each user
+      for (let m of messages2) {          
+        m.name = this.getUserForMsg(m.from, users);
+        m.myMsg = this.currentUser.uid === m.from;
+      }        
+      return messages2
     })
   )
 }
