@@ -48,7 +48,33 @@ En esta app podrás encontrar la siguiente información
         <ion-text  color="primary">
         </ion-text>      
       </ion-item  >
+      <ion-item >
+        <ion-text  color="primary">
+        Nuevas técnicas de tamizaje
+        </ion-text>      
+      </ion-item  >
+      <ion-menu-toggle>
+        <ion-item routerLink="/tecnica-bio" detail>
+          <ion-icon color="secondary" slot="start" name="woman-outline"></ion-icon>
+        Espectroscopia de bioimpedancia eléctrica
+        </ion-item>
+      </ion-menu-toggle>
+        <ion-menu-toggle>
+        <ion-item routerLink="/tecnica-fluo" detail>
+          <ion-icon color="primary" slot="start" name="woman-outline"></ion-icon>
+Espectroscopia óptica de fluorescencia        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item routerLink="/tecnica-termo" detail>
+          <ion-icon color="secondary" slot="start" name="woman-outline"></ion-icon>
+Termografía infrarroja
+        </ion-item>
 
+      </ion-menu-toggle>
+      <ion-item >
+        <ion-text  color="primary">
+        </ion-text>      
+      </ion-item  >
       <ion-menu-toggle>
         <ion-item routerLink="/chat" detail>
           <ion-icon slot="start" color="secondary" name="chatbubbles-outline"></ion-icon>
@@ -69,7 +95,7 @@ En esta app podrás encontrar la siguiente información
 
     <ion-menu-toggle>      
       <ion-item routerLink="/nosotros" detail>
-        <ion-icon slot="start" color="primary" name="home-outline"></ion-icon>
+        <ion-icon slot="start" color="secondary" name="home-outline"></ion-icon>
       ¿Quiénes somos?
       </ion-item>
     </ion-menu-toggle>
