@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+
 
 @Component({
   selector: 'app-reset-pass',
@@ -8,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class ResetPassPage implements OnInit {
   public email:string="";
-  constructor(private authService : AuthService) { }
+  constructor(private authService : AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -18,12 +20,14 @@ export class ResetPassPage implements OnInit {
     if(this.email != ""){
 
       this.authService.resetPassword(this.email).then(() => {
-        console.log('enviado');
+        this.router.navigate(['/login']);
+        alert('Se envio el correo de recuperación con éxito')
       }).catch(() => {
+        alert('Correo no se encuentra registrado')
         console.log('error');
       })
     } else {
-      alert('yasta loco, me voy a la mierda');
+      alert('Error');
     }
 
     this.authService

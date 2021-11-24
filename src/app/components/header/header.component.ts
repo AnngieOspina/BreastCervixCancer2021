@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -9,7 +11,7 @@ import { ActionSheetController } from '@ionic/angular';
 export class HeaderComponent implements OnInit {
 
   constructor(private actionSheetCtrl:
-    ActionSheetController) { }
+    ActionSheetController, private router: Router) { }
 
 
     ngOnInit() {}
@@ -17,25 +19,20 @@ export class HeaderComponent implements OnInit {
     async presentActionSheet() {
      const actionSheet = await this.actionSheetCtrl.create({
        header: 'Opciones',
-       buttons: [{
+       buttons: [
+        {
+          text: 'Inicio',
+          icon: 'home',
+          handler: () => {
+            this.router.navigate(['/home']);
+          }
+        }, {
          text: '¿Quénes somos?',
-         icon: 'home',
+         icon: 'finger-print',
          handler: () => {
-           console.log('Delete clicked');
+          this.router.navigate(['/nosotros']);
          }
-       }, {
-         text: 'Compartir',
-         icon: 'share',
-         handler: () => {
-           console.log('Share clicked');
-         }
-       }, {
-         text: 'Favorito',
-         icon: 'heart',
-         handler: () => {
-           console.log('Favorite clicked');
-         }
-       }, {
+       },  {
          text: 'Cancelar',
          icon: 'close',
          role: 'cancel',
